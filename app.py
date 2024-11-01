@@ -29,11 +29,10 @@ def buscar_item_buscape(url, termo_busca):
 
         for produto in produtos:
             try:
-
                 nome = produto.find_element(
-                    by='xpath', value='//h2[contains(@data-testid, "product-card::name")]').text
+                    by='xpath', value='.//h2[@class="Text_Text__ARJdp Text_MobileLabelXs__dHwGG Text_DesktopLabelSAtLarge__wWsED ProductCard_ProductCard_Name__U_mUQ"]').text
                 preco = produto.find_element(
-                    by='xpath', value='//p[contains(@data-testid, "product-card::price")]').text
+                    by='xpath', value='.//p[@class="Text_Text__ARJdp Text_MobileHeadingS__HEz7L"]').text
                 print("Nome:", nome)
                 print("Preço:", preco)
                 print("-----")
